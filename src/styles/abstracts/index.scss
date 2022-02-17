@@ -1,5 +1,6 @@
 @forward "./variables.scss" as var*;
 @import "./variables.scss";
+@import '../components/app';
 @import '../components/redditListContainer';
 @import '../components/redditListItem';
 @import './reset';

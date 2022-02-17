@@ -1,0 +1,18 @@
+.App {
+
+  header {
+    height: 5rem;
+    width: 100%;
+    background-color: $bg-light;
+    position: fixed;
+    border-bottom: 1px solid #d2d6d8;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 65%;
+      padding: 0 2rem;
+    }
+  }
+
+}

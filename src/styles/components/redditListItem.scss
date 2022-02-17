@@ -7,7 +7,11 @@
   flex-direction: column;
   gap: 1.5rem;
   background-color: $bg-light;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, .4);
+  transition: 0.4s;
+
+  &:hover {
+    box-shadow: 0 0 1.5rem rgba(200, 58, 58, 0.4);
+  }
 
   a {
     text-decoration: none;

@@ -4,6 +4,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <img src="/assets/aww.png" alt="logo"></img>
       </header>
       <RedditListContainer/>
     </div>
