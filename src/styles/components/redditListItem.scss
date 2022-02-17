@@ -1,0 +1,26 @@
+.RedditListItem {
+  border-radius: $border-radius;
+  margin: 2rem 0;
+  padding: 2.5rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: $bg-light;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, .4);
+
+  a {
+    text-decoration: none;
+    color: $text-dark;
+    transition: 0.1s;
+
+    &:hover {
+      color: $bg-dark;
+    }
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: 1.4rem;
+  }
+}

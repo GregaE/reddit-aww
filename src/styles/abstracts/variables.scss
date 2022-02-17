@@ -5,45 +5,14 @@ $main: 'Noto Sans', sans-serif;
 
 // colors
 
-$dark: #000000;
-$light: #ffffff;
+$text-dark: #000000;
+$text-light: #787C7E;
 $bg: #f4e7e7 ;
-$bg-dark: #e3c9c9;
-$action: #cbdadb;
+$bg-light: #ffffff;
+$bg-dark: #cbdadb;
 
 // border-radius
 
 $border-radius: 0.5rem;
-
-// MIXINS
-
-// Button
-
-@mixin btn($bg: $action, $color: $dark) {
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  font-weight: 600;
-  border-radius: $border-radius;
-  display: inline-block;
-  border: none;
-  padding: 14px 32px;
-  margin: 0;
-  text-decoration: none;
-  color: $color;
-  font-family: inherit;
-  line-height: 1.4rem;
-  cursor: pointer;
-  text-align: center;
-  background: $bg;
-  letter-spacing: 2px;
-  &:hover {
-    background:darken($bg,8%);
-    transition: all 0.3s ease;
-  }
-  &:active {
-    background:darken($bg,25%);
-  }
-}
 
 

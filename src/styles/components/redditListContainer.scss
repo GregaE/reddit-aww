@@ -1,0 +1,13 @@
+.RedditListContainer {
+  margin: 0 auto;
+  padding: 2.5rem;
+  background-color: $bg-dark;
+}
+
+@media (min-width: 610px) {
+
+  .RedditListContainer {
+    width: 600px;
+  }
+
+}

@@ -11,10 +11,6 @@ html {
 
 body {
   background-color: $bg;
-  color: $dark;
+  color: $text-light;
   font-size: 1.4rem;
-}
-
-button {
-  @include btn($action, $dark);
 }
