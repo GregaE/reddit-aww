@@ -5,16 +5,16 @@
 @import './reset';
 
 html {
-  font-family: $Poppins;
+  font-family: $main;
   font-size: 10px;
 }
 
 body {
   background-color: $bg;
-  color: $light;
+  color: $dark;
   font-size: 1.4rem;
 }
 
 button {
-  @include btn($action, $light);
+  @include btn($action, $dark);
 }
