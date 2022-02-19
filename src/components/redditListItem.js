@@ -1,14 +1,13 @@
-function RedditListItem( { title, thumbnail, path, subreddit } ) {
+import React from "react";
 
-  return (
-    <div className="RedditListItem">
-      <h3>{subreddit}</h3>
-      <h2>
-        <a href={`https://www.reddit.com${path}`}>{title}</a>
-      </h2>
-      <img src={thumbnail} alt="play-button" />
-    </div>
-  );
-}
+const RedditListItem = React.forwardRef((props,ref) => (
+  <div className="RedditListItem" ref={ref}>
+    <h3>{props.subreddit}</h3>
+    <h2>
+      <a href={`https://www.reddit.com${props.path}`}>{props.title}</a>
+    </h2>
+    <img src={props.thumbnail || './assets/img-placeholder.jpg'} alt="play-button" />
+  </div>
+));
 
 export default RedditListItem;
