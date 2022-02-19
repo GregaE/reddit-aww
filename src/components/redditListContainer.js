@@ -5,22 +5,19 @@ import { fetchNewPosts } from "../services/redditApiService"
 function RedditListContainer() {
 
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(true)
+  const [error, setError] = useState(false)
   const [redditPostList, setRedditPostList] = useState([]);
   const [nextPost, setNextPost] = useState("");
 
   const observer = useRef();
   const lastPostRef = useCallback(node => {
-    const options = {
-      rootMargin: '80%',
-    }
     if (loading) return
     if (observer.current) observer.current.disconnect()
     observer.current = new IntersectionObserver(entries => {
       if(entries[0].isIntersecting) {
         setNextPost(redditPostList[redditPostList.length-1].data.name)
       }
-    }, options)
+    })
     if (node) observer.current.observe(node)
   }, [loading, redditPostList])
 
@@ -49,7 +46,7 @@ function RedditListContainer() {
 
   useEffect(()=> {
     setLoading(true)
-    // setError(false)
+    setError(false)
     fetchNewPosts(nextPost)
       .then(res => {
         if(res.data) {
@@ -62,14 +59,14 @@ function RedditListContainer() {
 
   return (
     <div className="RedditListContainer">
-      {/* {renderPosts(redditPostList)} */}
+      {renderPosts(redditPostList)}
       {loading ?
         (<div className="spinner-container">
           <div className="spinner" />
         </div>
         ) : ""
       }
-      <div class='error'>{error && 'Error loading posts'}</div>
+      <div className='error'>{error && 'Error loading posts'}</div>
     </div>
   );
 }

@@ -15,3 +15,7 @@ body {
   color: $text-light;
   font-size: 1.4rem;
 }
+
+html, body, #root, .App {
+  height: 100%;
+}
