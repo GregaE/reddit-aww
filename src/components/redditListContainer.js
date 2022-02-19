@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import RedditListItem from "./redditListItem";
+import RedditListItemSkeleton from './redditListItemSkeleton';
 import { fetchNewPosts } from "../services/redditApiService"
 
 function RedditListContainer() {
@@ -60,12 +61,7 @@ function RedditListContainer() {
   return (
     <div className="RedditListContainer">
       {renderPosts(redditPostList)}
-      {loading ?
-        (<div className="spinner-container">
-          <div className="spinner" />
-        </div>
-        ) : ""
-      }
+      {loading && [1, 2, 3].map(item => <RedditListItemSkeleton/>)}
       <div className='error'>{error && 'Error loading posts'}</div>
     </div>
   );
