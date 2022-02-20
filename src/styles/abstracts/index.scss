@@ -1,10 +1,10 @@
 @forward "./variables.scss" as var*;
 @import "./variables.scss";
-@import '../components/app';
-@import '../components/redditListContainer';
-@import '../components/redditListItem';
-@import '../components/redditSkeletonItem';
-@import './reset';
+@import "../components/app";
+@import "../components/redditListContainer";
+@import "../components/redditListItem";
+@import "../components/redditSkeletonItem";
+@import "./reset";
 
 html {
   font-family: $main;
@@ -17,6 +17,9 @@ body {
   font-size: 1.4rem;
 }
 
-html, body, #root, .App {
+html,
+body,
+#root,
+.App {
   height: 100%;
 }
