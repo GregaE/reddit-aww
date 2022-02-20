@@ -1,6 +1,6 @@
 # Reddit aww
 
-React app displaying the newest Reddit posts from the r/aww subreddit.
+React app displaying the newest Reddit posts from the r/aww subreddit. Implements infinite scrolling using the Intersection Observer API.
 
 ## Running the app
 

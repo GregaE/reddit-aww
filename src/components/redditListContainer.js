@@ -70,7 +70,7 @@ function RedditListContainer() {
   return (
     <div className="RedditListContainer">
       {renderPosts(redditPostList)}
-      {loading && [1, 2, 3].map((item) => <RedditListItemSkeleton />)}
+      {loading && [1, 2, 3].map((item, index) => <RedditListItemSkeleton key={`skele${index}`} />)}
       <div className="error">{error && "Error loading posts"}</div>
     </div>
   );
