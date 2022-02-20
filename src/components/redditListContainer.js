@@ -62,7 +62,7 @@ function RedditListContainer() {
             ...res.data.children,
           ]);
         }
-        setLoading(false);
+        setLoading(true);
       })
       .catch((e) => setError(true));
   }, [nextPost]);

@@ -55,3 +55,13 @@
     }
   }
 }
+
+@media (max-width: 610px) {
+  .RedditSkeletonItem {
+    max-height: 35rem;
+    .thumbnail {
+      max-height: 30rem;
+    }
+  }
+
+}
